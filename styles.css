@@ -1,0 +1,128 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.head{
+    background-color: rgb(137, 181, 243);
+    width: 100%;
+    height: 6.5rem;
+    margin-top: -1.5rem;
+}
+
+h1{
+    font-family: cursive;
+    padding-left: 3rem;
+    padding-top: 1.5rem;
+}
+
+.container{
+    background-color: rgb(219, 219, 219);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.books{
+    background-color: white;
+    width: 12rem;
+    height: 16rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    border-radius: 10%;
+    display: none;
+}
+
+.title{
+    background-color: gray;
+}
+
+.bookFonts{
+    font-size: large;
+    align-content: center;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+}
+
+input[type=checkbox]{
+    width: 11rem;
+}
+
+.btnAdd{
+    width: 5rem;
+    height: 5rem;
+    align-self: flex-start;
+    margin-top: 4rem;
+    margin-right: 2rem;
+}
+
+.book-popup{
+    background-color: rgb(255, 255, 255);
+    width: 20rem;
+    height: 27rem;
+    position: fixed;
+    top: 160px;
+    bottom: 0;
+    right: 500px;
+    left: 20;
+    border-radius: 8%;
+    border: black 1px solid;
+    display:none
+}
+
+h2{
+    color: rgb(137, 181, 243);
+    padding-left: 7rem;
+    padding-top: 1rem;
+    display: inline;
+    margin-right: 4rem;
+}
+
+ input{
+    width: 90%;
+    margin: 0.3rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(243, 243, 243);
+    padding: 10px;
+    display: block;
+  }
+
+label{
+    padding-left: 1rem;
+    display: block;
+}
+
+select{
+    width: 90%;
+    margin: 0.3rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(243, 243, 243);
+    padding: 10px;
+}
+
+.btnSubmit{
+    width: 80%;
+    margin: 0.4rem 2rem;
+    height: 2.5rem;
+    background-color: rgb(137, 181, 243);
+    color: white;
+    border: none
+}
+
+.closeBtn{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    background-color: white;
+    border: none;
+    font-size: large;
+    color: rgb(137, 181, 243);
+}
+

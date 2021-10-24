@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <div class="head">
+            <h1>My Libray </h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="books">
+            <div class="title">
+                <p>Title</p>
+            </div>
+            <div class="author">
+                <p>By</p>
+            </div>
+            <div class="pages">
+                <p>pages</p>
+            </div>
+            <div class="read">
+                <p>read</p>
+            </div>
+            
+            
+            </div>
+        <button class="btnAdd">Add Book</button>
+    </div>
+
+
+   <form name="bookForm">
+    <div class = "book-popup" id= "book-form" >
+        <h2>Add Book</h2> <button class="closeBtn"><b>X</b></button>
+
+        <label for="title"><strong>Title:</strong></label>
+        <input type="text" placeholder="Enter Book Title" id="title">
+
+        <label for="author"><b>Author:</b></label>
+        <input type="text" placeholder="Enter Author name" id="author" >
+
+        <label for="author"><b>Number of Pages</b></label>
+        <input type="text" placeholder="Enter number of pages" id="pages" >
+
+        <label for="read"><b>Have you read it?</b></label>
+        <select name="read" id="read">
+           <option value="Yes">Yes</option>
+           <option value="No">No</option>
+        </select>
+
+        <button type= "submit"class ="btnSubmit"><b>Submit</b></button>
+
+    </div>
+</form> 
+
+</body>
+</html>
