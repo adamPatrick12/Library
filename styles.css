@@ -17,17 +17,18 @@ html,body
 h1{
     font-family: cursive;
     padding-left: 3rem;
-    padding-top: 1.5rem;
+    display: inline;
 }
 
 .container{
-    background-color: rgb(219, 219, 219);
+    background-color:white;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 
 .books{
     background-color: white;
@@ -37,16 +38,30 @@ h1{
     margin-left: 3rem;
     border-radius: 10%;
     display: none;
+    border: 1px black solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.title{
-    background-color: gray;
+.titleFonts{
+    font-size: large;
+    background-color: rgb(137, 181, 243);
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+.readFonts{
+    font-size: large;
+    background-color: rgb(104, 162, 245);
+    font-weight: 400;
+    text-align: center;
 }
 
 .bookFonts{
     font-size: large;
     align-content: center;
-    padding-left: 4rem;
+    padding-left: 2rem;
     padding-bottom: 1rem;
 }
 
@@ -54,12 +69,22 @@ input[type=checkbox]{
     width: 11rem;
 }
 
+.removeBtn{
+    width: 6rem;
+    height: 2rem;
+    margin-left: 3rem;
+    background-color: rgb(231, 173, 173);
+    display: block;
+    margin-top: 1.6rem;
+}
+
 .btnAdd{
-    width: 5rem;
-    height: 5rem;
-    align-self: flex-start;
-    margin-top: 4rem;
+    width: 4rem;
+    height: 4rem;
+    align-self: flex-end;
+    margin-top: 2rem;
     margin-right: 2rem;
+    border-radius: 50%;
 }
 
 .book-popup{
@@ -67,10 +92,9 @@ input[type=checkbox]{
     width: 20rem;
     height: 27rem;
     position: fixed;
-    top: 160px;
-    bottom: 0;
-    right: 500px;
-    left: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 8%;
     border: black 1px solid;
     display:none
