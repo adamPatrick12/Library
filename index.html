@@ -7,13 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Rampart+One&family=Zen+Kurenaido&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header>
         
         <div class="head">
-            <h1>My Libray </h1> <button class="btnAdd">Add Book</button>
+            <h1>My Libray </h1> <button class="btnAdd">+</button> <button class="btnDelete">Delete Last Book</button>
         </div>
     </header>
 
@@ -41,13 +44,13 @@
         <h2>Add Book</h2> <button class="closeBtn"><b>X</b></button>
 
         <label for="title"><strong>Title:</strong></label>
-        <input type="text" placeholder="Enter Book Title" id="title">
+        <input type="text" placeholder="Enter Book Title" id="title" required>
 
         <label for="author"><b>Author:</b></label>
-        <input type="text" placeholder="Enter Author name" id="author" >
+        <input type="text" placeholder="Enter Author name" id="author" required>
 
-        <label for="author"><b>Number of Pages</b></label>
-        <input type="text" placeholder="Enter number of pages" id="pages" >
+        <label for="pages"><b>Number of Pages</b></label>
+        <input type="number" placeholder="Enter number of pages" id="pages" min = "1" required>
 
         <label for="read"><b>Have you read it?</b></label>
         <select name="read" id="read">

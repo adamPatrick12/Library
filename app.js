@@ -6,8 +6,9 @@ btnSubmit = document.querySelector(".btnSubmit")
 bookCard = document.querySelector(".books")
 title = document.querySelector(".title")
 screenContainer = document.querySelector(".container")
-let btnId = 0;
-
+removeBookBtn = document.querySelector(".btnDelete")
+let btnId = 3;
+let index = [];
 
 let myLibrary = [];           //Library Array 
 
@@ -31,17 +32,9 @@ function addBookToLibrary(){
 }
  
 function displayBook (){
-  newBookCard = document.createElement("div")
-  newBookCard.classList.add("books")
-  screenContainer.appendChild(newBookCard)
-  removeBookBtn = document.createElement("button")
-  removeBookBtn.classList.add('removeBtn')
-  removeBookBtn.textContent = "Remove"
-  removeBookBtn.value = btnId;
-
   
-  for(let i = 0; i< myLibrary.length; i++){
-     titleName = document.createElement("p")
+  for(let i = 0; i< myLibrary.length; i++){             
+     titleName = document.createElement("p")                //Creating elements from User Input
      titleName.classList.add("titleFonts")
      titleName.textContent = `${myLibrary[i].title}`
 
@@ -57,29 +50,37 @@ function displayBook (){
      readOrNot.classList.add("readFonts")
      readOrNot.textContent = `Read: ${myLibrary[i].read}`
   }
+ 
+  createBookCard ()
+
+  };
+
+
+  //remove Book
+  removeBookBtn.addEventListener('click', () =>{
+    screenContainer.removeChild(screenContainer.lastChild)
+  })
+    
+
+// making book card and appending user input
+function createBookCard (){       
+  newBookCard = document.createElement("div")
+  newBookCard.classList.add("books")
+  screenContainer.appendChild(newBookCard)
   newBookCard.appendChild(titleName); 
   newBookCard.appendChild(authorName); 
   newBookCard.appendChild(pageNumber); 
   newBookCard.appendChild(readOrNot); 
-  newBookCard.appendChild(removeBookBtn); 
   newBookCard.style.display = "block"
-  btnId++
-
-  removeBookBtn.addEventListener('click', (e) =>{
-    c = screenContainer.childNodes
-    console.log(c)
-    
-  });
-
 }
 
+
 btnSubmit.addEventListener('click', function(e){
-  e.preventDefault()
+  e.preventDefault()                              //preventing default form action
   addBookToLibrary()
-  myLibrary.push(newBook)
-  console.log(myLibrary);
-  document.querySelector('form').reset()
-  closeForm()
+  myLibrary.push(newBook)                         //pushing book to array 
+  document.querySelector('form').reset()          //removing user input from form fields
+  closeForm()                                     //closing popout form
   displayBook ()
 });
    
@@ -94,13 +95,14 @@ closebtn.addEventListener('click', function(){
    
 }); 
 
-function openForm(){
-  bookForm.style.display = "block"
+function openForm(){    
+  bookForm.style.display = "block"              //
 }
 
 function closeForm(){
    bookForm.style.display = "none"
 }
+
 
 
 
